@@ -4,9 +4,18 @@ import BookCard from './BookCard';
 
 function App() {
   return (
-    <>
+    <ul className="books-grid">
       <BookCard />
-    </>
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+      <BookCard />
+    </ul>
   );
 }
 
