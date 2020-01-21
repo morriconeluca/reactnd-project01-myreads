@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import BookCard from './BookCard';
 
 function App() {
   return (
-    <div>
-      <h1>MyReads</h1>
-    </div>
+    <>
+      <BookCard />
+    </>
   );
 }
 
