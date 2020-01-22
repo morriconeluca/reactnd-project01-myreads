@@ -84,12 +84,12 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: #1565c0;
+  background-color: #c62828;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path fill="rgb(255,255,255)" d="M2.5 0a.749.749 0 100 1.5.749.749 0 100-1.5zM0 1.362v2.75c.87 0 1.66.34 2.25.888V2.25A3.288 3.288 0 000 1.362zm5 0c-.87 0-1.66.338-2.25.888V5A3.3 3.3 0 015 4.112z"/></svg>');
   background-position: .7em 50%,50% 100%;
   background-repeat: no-repeat;
   background-size: 1.2em;
-  border: 1px solid #1565c0;
+  border: 1px solid #c62828;
   border-radius: 50%;
   -webkit-box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
   box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
@@ -116,10 +116,10 @@
 
 .book-shelf-changer:hover,
 .book-shelf-changer:focus {
-  background-color: #1976d2;
-  border-color: #1976d2;
-  -webkit-box-shadow: 0 0 0 4px #64B5F6;
-  box-shadow: 0 0 0 4px #64B5F6;
+  background-color: #e53935;
+  border-color: #e53935;
+  -webkit-box-shadow: 0 0 0 4px #e57373;
+  box-shadow: 0 0 0 4px #e57373;
 }
 
 option {
