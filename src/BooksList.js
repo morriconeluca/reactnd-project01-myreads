@@ -3,32 +3,35 @@ import BookCard from './BookCard';
 
 function BooksList(props) {
   return (
-    <div className="list-books">
-      <div className="list-books-title">
-        <h1>MyReads</h1>
-      </div>
-      <div className="list-books-content">
-        <div>
-          <div className="bookshelf">
-            <h2 className="bookshelf-title">Currently Reading</h2>
-            <div className="bookshelf-books">
-              <ul className="books-grid">
-                <BookCard />
-                <BookCard />
-                <BookCard />
-                <BookCard />
-                <BookCard />
-                <BookCard />
-                <BookCard />
-                <BookCard />
-                <BookCard />
-                <BookCard />
-              </ul>
-            </div>
-          </div>
+    <main>
+      <div className="myreads-top">
+        <div className="container">
+          <header className="myreads-header">
+            <h1 className="list-books-title"><span>My</span>Reads</h1>
+          </header>
         </div>
       </div>
-    </div>
+      <section className="bookshelf">
+        <div className="container">
+          <header className="bookshelf-header">
+            <h2 className="bookshelf-title">Currently Reading</h2>
+          </header>
+          <ul className="books-grid">
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+            <BookCard />
+          </ul>
+          <div className="bookshelf-no-books"></div>
+        </div>
+      </section>
+    </main>
   );
 }
 
