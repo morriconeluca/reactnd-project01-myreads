@@ -7,9 +7,10 @@ const SearchPage = () => {
   return (
     <main role="main">
       <Header>
-        Search Page
+        <Link to="/" className="back-link" title="Back to Bookshelves">
+          Back to Bookshelves
+        </Link>
       </Header>
-      <Link to="/">Go to Bookshelves Page</Link>
     </main>
   );
 };

@@ -20,43 +20,75 @@ body {
 }
 
 main {
-  padding-top: 3em;
+  padding-top: 3.6em;
 }
 
-.header-wrapper {
+.container {
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header-row {
   background-color: #c62828;
   -webkit-box-shadow: 0 2px 16px 0 rgba(0,0,0,.2);
   box-shadow: 0 2px 16px 0 rgba(0,0,0,.2);
   left: 0;
+  padding: .5em 0;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
 }
 
-.header,
-.bookshelf-header {
-  padding: 0 1em;
+.header {
+  align-items: center;
+  display: flex;
+  height: 2.6em;
+  padding: 0 .5rem;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 1em;
-}
+/* Bookshelves Page Header */
 
 .bookshelves-page-title {
-  color: rgba(255,255,255,.4);
+  color: rgba(255,255,255,.5);
+  flex-grow: 1;
   font-size: 1.5em;
   letter-spacing: .5em;
-  line-height: 1;
-  margin: 0;
+  margin: 0 .5rem;
   text-align: center;
 }
 
 .bookshelves-page-title span {
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.9);
   font-weight: 400;
 }
+
+/* Search Page Header */
+
+.back-link {
+  color: transparent;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.188H1.197L2.944.44 2.5 0 0 2.5 2.5 5l.44-.44-1.743-1.747H5z" fill="rgba(255,255,255,.9)"/></svg>');
+  background-position: .7em 50%,50% 100%;
+  background-repeat: no-repeat;
+  background-size: 1.2em;
+  border-radius: 50%;
+  display: inline-block;
+  height: 2.6em;
+  margin: 0 1em;
+  overflow: hidden;
+  width: 2.6em;
+}
+
+.back-link:hover,
+.back-link:focus {
+  background-color: rgba(255,255,255,.1);
+  -webkit-box-shadow: 0 0 0 4px rgba(255,255,255,.5);
+  box-shadow: 0 0 0 4px rgba(255,255,255,.5);
+}
+
+
+
 
 .bookshelf {
   background-color: #fafaff;

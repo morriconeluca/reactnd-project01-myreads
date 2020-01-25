@@ -13,7 +13,7 @@ function BooksList(props) {
       </div>
       <section className="bookshelf">
         <div className="container">
-          <header className="bookshelf-header">
+          <header className="bookshelf-header inner-container">
             <h2 className="bookshelf-title">Currently Reading</h2>
           </header>
           <ul className="books-grid">
