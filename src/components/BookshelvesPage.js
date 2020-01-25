@@ -1,10 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import Header from './Header';
+
 const BookshelvesPage = () => {
   return (
     <main role="main">
-      <h1>Bookshelves</h1>
+      <Header>
+        <h1 className="bookshelves-page-title"><span>My</span>Reads</h1>
+      </Header>
       <Link to="/search">Go to Search Page</Link>
     </main>
   );

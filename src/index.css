@@ -23,7 +23,7 @@ main {
   padding-top: 3em;
 }
 
-.myreads-top {
+.header-wrapper {
   background-color: #c62828;
   -webkit-box-shadow: 0 2px 16px 0 rgba(0,0,0,.2);
   box-shadow: 0 2px 16px 0 rgba(0,0,0,.2);
@@ -34,7 +34,7 @@ main {
   z-index: 1;
 }
 
-.myreads-header,
+.header,
 .bookshelf-header {
   padding: 0 1em;
 }
@@ -44,7 +44,7 @@ main {
   padding: 1em;
 }
 
-.list-books-title {
+.bookshelves-page-title {
   color: rgba(255,255,255,.4);
   font-size: 1.5em;
   letter-spacing: .5em;
@@ -53,7 +53,7 @@ main {
   text-align: center;
 }
 
-.list-books-title span {
+.bookshelves-page-title span {
   color: rgba(255,255,255,.8);
   font-weight: 400;
 }
@@ -229,7 +229,7 @@ option:disabled {
 }
 
 @media (min-width: 568px) {
-  .list-books-title {
+  .bookshelves-page-title {
     letter-spacing: 1em;
   }
 
@@ -239,7 +239,7 @@ option:disabled {
 }
 
 @media (min-width: 768px) {
-  .list-books-title {
+  .bookshelves-page-title {
     letter-spacing: 1em;
   }
 
