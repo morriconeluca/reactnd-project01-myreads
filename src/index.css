@@ -20,6 +20,7 @@ body {
 }
 
 main {
+  background-color: #fafaff;
   padding-top: 3.6em;
 }
 
@@ -29,7 +30,7 @@ main {
 
 .circle-icon-button {
   color: transparent;
-  background-position: .75em 51%,50% 100%;
+  background-position: .71em 50%,50% 100%;
   background-repeat: no-repeat;
   background-size: 1.2em;
   border-radius: 50%;
@@ -99,8 +100,9 @@ main {
 /* Add New Book Button */
 
 .add-link {
-  background-color: #f5f5ff;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.857H2.857V5h-.714V2.857H0v-.714h2.143V0h.714v2.143H5z" fill="rgba(0,0,0,.8)"/></svg>');
+  background-color: rgba(238,238,238,.8);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.857H2.857V5h-.714V2.857H0v-.714h2.143V0h.714v2.143H5z" fill="rgba(183,28,28,.9)"/></svg>');
+  border: 1px solid rgba(189,189,189,.8);
   bottom: 1rem;
   -webkit-box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
   box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
@@ -119,7 +121,6 @@ main {
 
 
 .bookshelf {
-  background-color: #fafaff;
   padding: 0 2.6em;
 }
 
