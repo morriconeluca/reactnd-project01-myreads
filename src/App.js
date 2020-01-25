@@ -1,10 +1,16 @@
 import React from 'react';
-import './App.css';
-import BooksList from './BooksList';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import BookshelvesPage from './components/BookshelvesPage';
+import SearchPage from './components/SearchPage';
 
 function App() {
   return (
-    <BooksList />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={BookshelvesPage}/>
+        <Route path="/search" component={SearchPage}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
