@@ -27,6 +27,17 @@ main {
   margin: 0 auto;
 }
 
+.circle-icon-button {
+  color: transparent;
+  background-position: .75em 51%,50% 100%;
+  background-repeat: no-repeat;
+  background-size: 1.2em;
+  border-radius: 50%;
+  display: inline-block;
+  height: 2.6em;
+  width: 2.6em;
+}
+
 /* Header */
 
 .header-row {
@@ -42,7 +53,11 @@ main {
 }
 
 .header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 2.6em;
   padding: 0 .5rem;
@@ -52,6 +67,8 @@ main {
 
 .bookshelves-page-title {
   color: rgba(255,255,255,.5);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   font-size: 1.5em;
   letter-spacing: .5em;
@@ -67,17 +84,9 @@ main {
 /* Search Page Header */
 
 .back-link {
-  color: transparent;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.188H1.197L2.944.44 2.5 0 0 2.5 2.5 5l.44-.44-1.743-1.747H5z" fill="rgba(255,255,255,.9)"/></svg>');
-  background-position: .7em 50%,50% 100%;
-  background-repeat: no-repeat;
-  background-size: 1.2em;
-  border-radius: 50%;
-  display: inline-block;
-  height: 2.6em;
-  margin: 0 1em;
+  margin: 0 .5em;
   overflow: hidden;
-  width: 2.6em;
 }
 
 .back-link:hover,
@@ -87,6 +96,25 @@ main {
   box-shadow: 0 0 0 4px rgba(255,255,255,.5);
 }
 
+/* Add New Book Button */
+
+.add-link {
+  background-color: #2962ff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.857H2.857V5h-.714V2.857H0v-.714h2.143V0h.714v2.143H5z" fill="rgba(255,255,255,.9)"/></svg>');
+  bottom: 1rem;
+  -webkit-box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
+  box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
+  overflow: hidden;
+  position: fixed;
+  right: 1rem;
+}
+
+.add-link:hover,
+.add-link:focus {
+  background-color: #2979ff;
+  -webkit-box-shadow: 0 0 0 4px rgba(68,138,255,.8);
+  box-shadow: 0 0 0 4px rgba(68,138,255,.8);
+}
 
 
 
@@ -200,7 +228,7 @@ main {
   -moz-appearance: none;
   appearance: none;
   background-color: #c62828;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path fill="rgb(255,255,255)" d="M2.5 0a.749.749 0 100 1.5.749.749 0 100-1.5zM0 1.362v2.75c.87 0 1.66.34 2.25.888V2.25A3.288 3.288 0 000 1.362zm5 0c-.87 0-1.66.338-2.25.888V5A3.3 3.3 0 015 4.112z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path fill="rgba(255,255,255,.9)" d="M2.5 0a.749.749 0 100 1.5.749.749 0 100-1.5zM0 1.362v2.75c.87 0 1.66.34 2.25.888V2.25A3.288 3.288 0 000 1.362zm5 0c-.87 0-1.66.338-2.25.888V5A3.3 3.3 0 015 4.112z"/></svg>');
   background-position: .7em 50%,50% 100%;
   background-repeat: no-repeat;
   background-size: 1.2em;

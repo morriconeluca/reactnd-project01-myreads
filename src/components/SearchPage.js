@@ -7,7 +7,11 @@ const SearchPage = () => {
   return (
     <main role="main">
       <Header>
-        <Link to="/" className="back-link" title="Back to Bookshelves">
+        <Link
+          to="/"
+          className="back-link circle-icon-button"
+          title="Back to Bookshelves"
+        >
           Back to Bookshelves
         </Link>
       </Header>

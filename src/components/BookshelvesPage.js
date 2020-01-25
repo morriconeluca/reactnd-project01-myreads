@@ -9,7 +9,12 @@ const BookshelvesPage = () => {
       <Header>
         <h1 className="bookshelves-page-title"><span>My</span>Reads</h1>
       </Header>
-      <Link to="/search">Go to Search Page</Link>
+      <Link
+        to="/search"
+        className="add-link circle-icon-button"
+      >
+        Add New Book
+      </Link>
     </main>
   );
 };
