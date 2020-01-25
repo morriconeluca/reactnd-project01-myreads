@@ -99,8 +99,8 @@ main {
 /* Add New Book Button */
 
 .add-link {
-  background-color: #2962ff;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.857H2.857V5h-.714V2.857H0v-.714h2.143V0h.714v2.143H5z" fill="rgba(255,255,255,.9)"/></svg>');
+  background-color: #f5f5ff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.857H2.857V5h-.714V2.857H0v-.714h2.143V0h.714v2.143H5z" fill="rgba(0,0,0,.8)"/></svg>');
   bottom: 1rem;
   -webkit-box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
   box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
@@ -111,9 +111,9 @@ main {
 
 .add-link:hover,
 .add-link:focus {
-  background-color: #2979ff;
-  -webkit-box-shadow: 0 0 0 4px rgba(68,138,255,.8);
-  box-shadow: 0 0 0 4px rgba(68,138,255,.8);
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 0 4px rgba(244,67,54,.8);
+  box-shadow: 0 0 0 4px rgba(244,67,54,.8);
 }
 
 
