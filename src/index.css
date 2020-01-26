@@ -16,12 +16,12 @@ html {
 }
 
 body {
+  background-color: #fafafa;
   margin: 0;
 }
 
 main {
-  background-color: #fafaff;
-  padding-top: 3.6em;
+  padding-top: 5.6em;
 }
 
 .container {
@@ -42,11 +42,11 @@ main {
 /* Header */
 
 .header-row {
-  background-color: #c62828;
+  background-color: #263238;
   -webkit-box-shadow: 0 2px 16px 0 rgba(0,0,0,.2);
   box-shadow: 0 2px 16px 0 rgba(0,0,0,.2);
   left: 0;
-  padding: .5em 0;
+  padding: 1em 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -60,14 +60,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 2.6em;
+  height: 3.6em;
   padding: 0 .5rem;
 }
 
 /* Bookshelves Page Header */
 
 .bookshelves-page-title {
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.6);
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -100,9 +100,8 @@ main {
 /* Add New Book Button */
 
 .add-link {
-  background-color: rgba(238,238,238,.8);
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.857H2.857V5h-.714V2.857H0v-.714h2.143V0h.714v2.143H5z" fill="rgba(183,28,28,.9)"/></svg>');
-  border: 1px solid rgba(189,189,189,.8);
+  background-color: #263238;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.857H2.857V5h-.714V2.857H0v-.714h2.143V0h.714v2.143H5z" fill="rgba(255,255,255,.9)"/></svg>');
   bottom: 1rem;
   -webkit-box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
   box-shadow: 2px 6px 8px 0 rgba(0,0,0,.4);
@@ -113,10 +112,37 @@ main {
 
 .add-link:hover,
 .add-link:focus {
-  background-color: #fff;
-  -webkit-box-shadow: 0 0 0 4px rgba(244,67,54,.8);
-  box-shadow: 0 0 0 4px rgba(244,67,54,.8);
+  background-color: #37474F;
+  -webkit-box-shadow: 0 0 0 4px rgba(96,125,139,.8);
+  box-shadow: 0 0 0 4px rgba(96,125,139,.8);
 }
+
+.search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgba(238,238,238,.8);
+  color: rgba(0,0,0,.8);
+  border: 1px solid rgba(189,189,189,.8);
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0 .5em;
+  padding: 1em;
+  text-align: center;
+}
+
+.search:hover,
+.search:focus {
+  background-color: #fff;
+  border-color: #fff;
+  -webkit-box-shadow: 0 0 0 4px rgba(255,255,255,.5);
+  box-shadow: 0 0 0 4px rgba(255,255,255,.5);
+}
+
 
 
 
@@ -208,7 +234,7 @@ main {
 }
 
 .book-details {
-  background-color: #eef;
+  background-color: rgba(238,238,238,.8);
   border-radius: 0 0 16px 16px;
   padding: 1em;
 }
@@ -268,7 +294,7 @@ main {
 
 option {
   color: rgba(0,0,0,.8);
-  background-color: #eef;
+  background-color: #eee;
 }
 
 option:disabled {
