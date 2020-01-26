@@ -19,7 +19,7 @@ class Search extends Component {
         BooksAPI.search(query.trim()).then(data => {
           console.log(JSON.stringify(data));
         });
-      }, 200)
+      }, 500)
     });
   }
 
@@ -43,7 +43,7 @@ class Search extends Component {
         type="search"
         className="search"
         value={this.state.query}
-        placeholder="Search by title or author"
+        placeholder="🔍 Search by title or author"
         onChange={this.handleChange}
       />
     );

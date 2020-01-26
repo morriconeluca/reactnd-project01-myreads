@@ -6,6 +6,7 @@
 }
 
 html {
+  background-color: #f1f1f1;
   color: rgba(0,0,0,.8);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.17em;
@@ -16,7 +17,6 @@ html {
 }
 
 body {
-  background-color: #fafafa;
   margin: 0;
 }
 
@@ -30,7 +30,7 @@ main {
 
 .circle-icon-button {
   color: transparent;
-  background-position: .71em 50%,50% 100%;
+  background-position: .703em 50%,50% 100%;
   background-repeat: no-repeat;
   background-size: 1.2em;
   border-radius: 50%;
@@ -74,6 +74,7 @@ main {
   font-size: 1.5em;
   letter-spacing: .5em;
   margin: 0 .5rem;
+  padding-left: .5em;
   text-align: center;
 }
 
@@ -87,6 +88,8 @@ main {
 .back-link {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.188H1.197L2.944.44 2.5 0 0 2.5 2.5 5l.44-.44-1.743-1.747H5z" fill="rgba(255,255,255,.9)"/></svg>');
   margin: 0 .5em;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -131,8 +134,9 @@ main {
   font-family: inherit;
   font-size: inherit;
   margin: 0 .5em;
-  padding: 1em;
+  padding: 1em .3em;
   text-align: center;
+  width: 5em;
 }
 
 .search:hover,
@@ -159,6 +163,7 @@ main {
   font-size: 1.17em;
   font-weight: 400;
   letter-spacing: .1em;
+  padding-left: .1em;
   text-transform: uppercase;
 }
 
@@ -312,24 +317,23 @@ option:disabled {
 
   .bookshelf-title {
     letter-spacing: .3em;
+    padding-left: .3em;
   }
 }
 
 @media (min-width: 568px) {
   .bookshelves-page-title {
     letter-spacing: 1em;
+    padding-left: 1em;
   }
 
   .bookshelf-title {
     letter-spacing: .5em;
+    padding-left: .5em;
   }
 }
 
 @media (min-width: 768px) {
-  .bookshelves-page-title {
-    letter-spacing: 1em;
-  }
-
   .bookshelf-title {
     font-size: 1.33em;
   }
