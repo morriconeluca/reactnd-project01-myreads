@@ -14,8 +14,8 @@ function BookCard({title, authors, shelf, thumbnail}) {
       </figure>
       <header className="book-details">
           {
-            authors.map(author => (
-              <p className="book-authors">{author}</p>
+            authors.map((author, index) => (
+              <p className="book-authors" key={index}>{author}</p>
             ))
           }
         <h3 className="book-title">{title}</h3>

@@ -27,7 +27,7 @@ const BookshelvesPage = ({myReads}) => {
       </Header>
       {
         shelves.map(shelf => (
-          <Bookshelf books={myReads} shelf={shelf} />
+          <Bookshelf key={shelf.type} books={myReads} shelf={shelf} />
         ))
       }
       <Link
