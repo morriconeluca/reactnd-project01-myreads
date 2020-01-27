@@ -17,9 +17,22 @@ function Bookshelf({books, shelf}) {
                 books.filter(book => {
                   return book.shelf && book.shelf === shelf.type
                 }).map(book => {
-                  const {title, authors} = book;
+                  const {
+                    id,
+                    title,
+                    authors,
+                    imageLinks: {
+                      thumbnail
+                    }
+                  } = book;
                   return (
-                    <BookCard title={title} authors={authors} shelf={shelf} />
+                    <BookCard
+                      key={id}
+                      title={title}
+                      authors={authors}
+                      shelf={shelf}
+                      thumbnail={thumbnail}
+                    />
                   );
                 })
               }
