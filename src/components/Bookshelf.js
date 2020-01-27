@@ -19,7 +19,7 @@ function Bookshelf({books, shelf}) {
                 }).map(book => {
                   const {title, authors} = book;
                   return (
-                    <BookCard title={title} authors={authors} />
+                    <BookCard title={title} authors={authors} shelf={shelf} />
                   );
                 })
               }
