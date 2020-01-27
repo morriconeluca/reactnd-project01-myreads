@@ -13,12 +13,14 @@ function BookCard({title, authors, shelf, thumbnail}) {
         <BookShelfChanger shelf={shelf} />
       </figure>
       <header className="book-details">
+        <h3 className="book-title">{title}</h3>
+        <p className="book-authors">
           {
             authors.map((author, index) => (
-              <p className="book-authors" key={index}>{author}</p>
+              author + (index < authors.length - 1 ? ', ' : '')
             ))
           }
-        <h3 className="book-title">{title}</h3>
+        </p>
       </header>
     </li>
   );

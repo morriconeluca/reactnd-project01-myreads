@@ -23,7 +23,7 @@ const BookshelvesPage = ({myReads}) => {
   return (
     <main role="main">
       <Header>
-        <h1 className="bookshelves-page-title"><span>My</span>Reads</h1>
+        <h1 className="bookshelves-page-title">My<span>Reads</span></h1>
       </Header>
       {
         shelves.map(shelf => (
