@@ -182,7 +182,7 @@ main {
 
 .book-card {
   background-color: #fff;
-  border-radius: 16px;
+  border-radius: 4px;
   display: inline-block;
   flex: 1 1 8em;
   margin: 1em;
@@ -240,7 +240,7 @@ main {
 
 .book-details {
   background-color: rgba(224,224,224,.8);
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 4px 4px;
   padding: 1em;
 }
 

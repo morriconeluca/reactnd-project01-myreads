@@ -25,7 +25,11 @@ const BookshelvesPage = ({myReads}) => {
       <Header>
         <h1 className="bookshelves-page-title"><span>My</span>Reads</h1>
       </Header>
-      <Bookshelf books={myReads} shelf={shelves[0]} />
+      {
+        shelves.map(shelf => (
+          <Bookshelf books={myReads} shelf={shelf} />
+        ))
+      }
       <Link
         to="/search"
         className="add-link circle-icon-button"
