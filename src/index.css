@@ -8,7 +8,7 @@
 }
 
 html {
-  background-color: #fff;
+  background-color: #eee;
   color: rgba(0,0,0,.8);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.17em;
@@ -71,7 +71,7 @@ main {
 /* HEADER */
 
 .header-row {
-  background-color: #fff;
+  background-color: #efebe9;
   -webkit-box-shadow: 0 2px 16px 0 rgba(0,0,0,.2);
   box-shadow: 0 2px 16px 0 rgba(0,0,0,.2);
   left: 0;
@@ -149,7 +149,7 @@ main {
 /* ADD NEW BOOK BUTTON */
 
 .add-link {
-  background-color: rgba(238,238,238,.8);
+  background-color: #d7ccc8;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5"><path d="M5 2.857H2.857V5h-.714V2.857H0v-.714h2.143V0h.714v2.143H5z" fill="rgba(0,0,0,.8)"/></svg>');
   border-color: rgba(189,189,189,.8);
   bottom: 1rem;
@@ -171,7 +171,6 @@ main {
 /* BOOKSHELF */
 
 .bookshelf {
-  background-color: #eee;
   min-height: calc(100vh - 4.6em);
   padding: 2em 1em;
 }
@@ -187,7 +186,7 @@ main {
 }
 
 .bookshelf-title {
-  background-color: #37474f;
+  background-color: #424242;
   color: #fff;
   display: inline-block;
   font-size: 1.17em;
@@ -211,16 +210,16 @@ main {
 }
 
 .bookshelf-title::after {
-  border-color: transparent transparent #263238 transparent;
+  border-color: transparent transparent #212121 transparent;
   border-width: 0 2rem 1rem 0;
   right: 0;
-  top: -1rem;
+  top: -.99rem;
 }
 
 .bookshelf-title::before {
-  border-color: #263238 transparent transparent transparent;
+  border-color: #212121 transparent transparent transparent;
   border-width: 1rem 0 0 2rem;
-  bottom: -1rem;
+  bottom: -.99rem;
   left: 0;
 }
 
@@ -234,7 +233,7 @@ main {
 /* BOOK CARD */
 
 .book-card {
-  background-color: #e0e0e0;
+  background-color: #d7ccc8;
   border-radius: 8px;
   flex: 1 1 15em;
   margin: 2em 1em;
