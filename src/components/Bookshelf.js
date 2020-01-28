@@ -19,7 +19,8 @@ function Bookshelf({books, shelf, updateMyReads}) {
             <ul className="books-grid centralize">
               {
                 books.map(book => {
-                  const {id, title, authors, imageLinks: {thumbnail}} = book;
+                  const {id, title, authors} = book;
+                  const thumbnail = book.imageLinks ? book.imageLinks.thumbnail : undefined;
                   return (
                     <BookCard
                       key={id}

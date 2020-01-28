@@ -3,7 +3,7 @@ import * as BooksAPI from '../BooksAPI';
 
 class BookShelfChanger extends Component {
   state = {
-    value: this.props.shelf
+    value: this.props.shelf || 'none'
   };
 
   updateBook = () => {

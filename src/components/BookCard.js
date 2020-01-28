@@ -1,18 +1,20 @@
 import React from 'react';
 import BookshelfChanger from './BookshelfChanger';
 
+import coverPlaceholder from '../book-cover-placeholder.png'
+
 function BookCard({id, title, authors, thumbnail, shelf, updateMyReads}) {
   return (
     <li className="book-card centralize">
       <figure className="book">
         <img
           className="book-cover"
-          src={thumbnail}
+          src={thumbnail ? thumbnail : coverPlaceholder}
           alt={`Cover of ${title}`}
         />
         <BookshelfChanger
           bookId={id}
-          shelf={shelf.type}
+          shelf={shelf && shelf.type}
           updateMyReads={updateMyReads}
         />
       </figure>
@@ -20,9 +22,9 @@ function BookCard({id, title, authors, thumbnail, shelf, updateMyReads}) {
         <h3 className="book-title">{title}</h3>
         <p className="book-authors">
           {
-            authors.map((author, index) => (
+            authors && authors.length > 0 ? authors.map((author, index) => (
               author + (index < authors.length - 1 ? ', ' : '')
-            ))
+            )) : 'Authors not provided'
           }
         </p>
       </header>

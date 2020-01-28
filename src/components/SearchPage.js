@@ -5,7 +5,7 @@ import Header from './Header';
 import Search from './Search';
 import Bookshelf from './Bookshelf';
 
-const SearchPage = ({booksFound, updateMyReads}) => {
+const SearchPage = ({booksFound, updateMyReads, updateBooksFound}) => {
   return (
     <main role="main">
       <Header>
@@ -16,7 +16,7 @@ const SearchPage = ({booksFound, updateMyReads}) => {
         >
           Back to Bookshelves
         </Link>
-        <Search />
+        <Search updateBooksFound={updateBooksFound} />
       </Header>
       <Bookshelf
         books={booksFound}

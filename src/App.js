@@ -24,12 +24,18 @@ class App extends Component {
   updateMyReads = (bookID) => {
     BooksAPI.get(bookID).then(bookFromAPI => {
       this.setState(({myReads}) => ({
-        myReads: myReads.map(book => (
-          book.id !== bookID ? book : bookFromAPI
-        ))
+        myReads: myReads.filter(book => (
+          book.id !== bookID
+        )).concat(bookFromAPI)
       }));
     });
   };
+
+  updateBooksFound = books => {
+    this.setState({
+      booksFound: books
+    });
+  }
 
   render() {
     return (
@@ -49,6 +55,7 @@ class App extends Component {
                 <SearchPage
                   booksFound={this.state.booksFound}
                   updateMyReads={this.updateMyReads}
+                  updateBooksFound={this.updateBooksFound}
                 />
               );
             }}/>

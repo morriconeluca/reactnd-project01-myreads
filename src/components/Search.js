@@ -3,9 +3,10 @@ import * as BooksAPI from '../BooksAPI';
 
 class Search extends Component {
   state = {
-    query: '',
-    debounceId: undefined
+    query: ''
   };
+
+  debounceId = undefined;
 
   debounceSearch = () => {
     const {query} = this.state;
@@ -14,20 +15,16 @@ class Search extends Component {
       return;
     }
 
-    this.setState({
-      debounceId: setTimeout(() => {
-        BooksAPI.search(query.trim()).then(data => {
-          console.log(JSON.stringify(data));
-        });
-      }, 500)
-    });
+    this.debounceId = setTimeout(() => {
+      BooksAPI.search(query.trim()).then(books => {
+        this.props.updateBooksFound(books);
+      });
+    }, 500)
   }
 
   handleChange = event => {
-    const {debounceId} = this.state;
-
-    if (debounceId) {
-      clearTimeout(debounceId);
+    if (this.debounceId) {
+      clearTimeout(this.debounceId);
     }
 
     const {value} = event.target;
