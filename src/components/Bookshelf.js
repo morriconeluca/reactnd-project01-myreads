@@ -2,6 +2,10 @@ import React from 'react';
 import BookCard from './BookCard';
 
 function Bookshelf({books, shelf, updateMyReads}) {
+  books = books.filter(book => {
+    return !book.shelf || book.shelf === shelf.type
+  });
+
   return (
     <section className="bookshelf centralize">
       <div className="container">
@@ -14,9 +18,7 @@ function Bookshelf({books, shelf, updateMyReads}) {
           ? (
             <ul className="books-grid centralize">
               {
-                books.filter(book => {
-                  return !book.shelf || book.shelf === shelf.type
-                }).map(book => {
+                books.map(book => {
                   const {id, title, authors, imageLinks: {thumbnail}} = book;
                   return (
                     <BookCard
@@ -33,7 +35,9 @@ function Bookshelf({books, shelf, updateMyReads}) {
               }
             </ul>
           ) : (
-            <div className="bookshelf-no-books"></div>
+            <div className="centralize">
+              <p>No books yet...</p>
+            </div>
           )
         }
       </div>
