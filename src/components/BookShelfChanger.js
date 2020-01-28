@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class BookShelfChanger extends Component {
   render() {
     return (
-      <select className="book-shelf-changer">
+      <select className="book-shelf-changer circle-icon-button">
         <option value="move" disabled>Move to...</option>
         <option value="currentlyReading">Currently Reading</option>
         <option value="wantToRead">Want to Read</option>

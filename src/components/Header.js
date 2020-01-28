@@ -4,7 +4,7 @@ const Header = ({children}) => {
   return (
     <div className="header-row">
       <div className="container">
-        <header className="header">
+        <header className="header centralize">
           {children}
         </header>
       </div>

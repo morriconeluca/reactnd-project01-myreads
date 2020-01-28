@@ -3,7 +3,7 @@ import BookShelfChanger from './BookShelfChanger';
 
 function BookCard({title, authors, shelf, thumbnail}) {
   return (
-    <li className="book-card fadeIn">
+    <li className="book-card centralize">
       <figure className="book">
         <img
           className="book-cover"
@@ -12,7 +12,7 @@ function BookCard({title, authors, shelf, thumbnail}) {
         />
         <BookShelfChanger shelf={shelf} />
       </figure>
-      <header className="book-details">
+      <header className="book-details centralize grow">
         <h3 className="book-title">{title}</h3>
         <p className="book-authors">
           {

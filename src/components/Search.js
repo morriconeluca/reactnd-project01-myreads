@@ -41,7 +41,7 @@ class Search extends Component {
     return (
       <input
         type="search"
-        className="search"
+        className="search grow"
         value={this.state.query}
         placeholder="🔍 Search by title or author"
         onChange={this.handleChange}

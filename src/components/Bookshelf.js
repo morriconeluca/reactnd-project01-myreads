@@ -3,7 +3,7 @@ import BookCard from './BookCard';
 
 function Bookshelf({books, shelf}) {
   return (
-    <section className="bookshelf">
+    <section className="bookshelf centralize">
       <div className="container">
         {shelf &&
           <header className="bookshelf-header inner-container">
@@ -12,7 +12,7 @@ function Bookshelf({books, shelf}) {
         }
         {books.length > 0
           ? (
-            <ul className="books-grid">
+            <ul className="books-grid centralize">
               {
                 books.filter(book => {
                   return book.shelf && book.shelf === shelf.type
