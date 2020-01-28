@@ -1,5 +1,5 @@
 import React from 'react';
-import BookShelfChanger from './BookShelfChanger';
+import BookshelfChanger from './BookshelfChanger';
 
 function BookCard({id, title, authors, thumbnail, shelf, updateMyReads}) {
   return (
@@ -10,7 +10,7 @@ function BookCard({id, title, authors, thumbnail, shelf, updateMyReads}) {
           src={thumbnail}
           alt={`Cover of ${title}`}
         />
-        <BookShelfChanger
+        <BookshelfChanger
           bookId={id}
           shelf={shelf.type}
           updateMyReads={updateMyReads}
