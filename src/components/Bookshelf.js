@@ -15,7 +15,7 @@ function Bookshelf({books, shelf, updateMyReads}) {
             <ul className="books-grid centralize">
               {
                 books.filter(book => {
-                  return book.shelf && book.shelf === shelf.type
+                  return !book.shelf || book.shelf === shelf.type
                 }).map(book => {
                   const {id, title, authors, imageLinks: {thumbnail}} = book;
                   return (

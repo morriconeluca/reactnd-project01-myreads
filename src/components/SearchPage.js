@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom';
 
 import Header from './Header';
 import Search from './Search';
+import Bookshelf from './Bookshelf';
 
-const SearchPage = () => {
+const SearchPage = ({booksFound, updateMyReads}) => {
   return (
     <main role="main">
       <Header>
@@ -17,6 +18,10 @@ const SearchPage = () => {
         </Link>
         <Search />
       </Header>
+      <Bookshelf
+        books={booksFound}
+        updateMyReads={updateMyReads}
+      />
     </main>
   );
 };

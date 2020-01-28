@@ -8,7 +8,8 @@ import SearchPage from './components/SearchPage';
 class App extends Component {
   state = {
     loading: true,
-    myReads: []
+    myReads: [],
+    booksFound: []
   };
 
   componentDidMount() {
@@ -43,7 +44,14 @@ class App extends Component {
                 />
               );
             }}/>
-            <Route path="/search" component={SearchPage}/>
+            <Route path="/search" render={() => {
+              return (
+                <SearchPage
+                  booksFound={this.state.booksFound}
+                  updateMyReads={this.updateMyReads}
+                />
+              );
+            }}/>
           </Switch>
         }
       </BrowserRouter>
