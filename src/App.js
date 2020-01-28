@@ -20,6 +20,16 @@ class App extends Component {
     });
   }
 
+  updateMyReads = (bookID) => {
+    BooksAPI.get(bookID).then(bookFromAPI => {
+      this.setState(({myReads}) => ({
+        myReads: myReads.map(book => (
+          book.id !== bookID ? book : bookFromAPI
+        ))
+      }));
+    });
+  };
+
   render() {
     return (
       <BrowserRouter>
@@ -27,7 +37,10 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() => {
               return (
-                <BookshelvesPage myReads={this.state.myReads} />
+                <BookshelvesPage
+                  myReads={this.state.myReads}
+                  updateMyReads={this.updateMyReads}
+                />
               );
             }}/>
             <Route path="/search" component={SearchPage}/>

@@ -1,7 +1,7 @@
 import React from 'react';
 import BookCard from './BookCard';
 
-function Bookshelf({books, shelf}) {
+function Bookshelf({books, shelf, updateMyReads}) {
   return (
     <section className="bookshelf centralize">
       <div className="container">
@@ -17,21 +17,16 @@ function Bookshelf({books, shelf}) {
                 books.filter(book => {
                   return book.shelf && book.shelf === shelf.type
                 }).map(book => {
-                  const {
-                    id,
-                    title,
-                    authors,
-                    imageLinks: {
-                      thumbnail
-                    }
-                  } = book;
+                  const {id, title, authors, imageLinks: {thumbnail}} = book;
                   return (
                     <BookCard
                       key={id}
+                      id={id}
                       title={title}
                       authors={authors}
-                      shelf={shelf}
                       thumbnail={thumbnail}
+                      shelf={shelf}
+                      updateMyReads={updateMyReads}
                     />
                   );
                 })

@@ -1,7 +1,7 @@
 import React from 'react';
 import BookShelfChanger from './BookShelfChanger';
 
-function BookCard({title, authors, shelf, thumbnail}) {
+function BookCard({id, title, authors, thumbnail, shelf, updateMyReads}) {
   return (
     <li className="book-card centralize">
       <figure className="book">
@@ -10,7 +10,11 @@ function BookCard({title, authors, shelf, thumbnail}) {
           src={thumbnail}
           alt={`Cover of ${title}`}
         />
-        <BookShelfChanger shelf={shelf} />
+        <BookShelfChanger
+          bookId={id}
+          shelf={shelf.type}
+          updateMyReads={updateMyReads}
+        />
       </figure>
       <header className="book-details centralize grow">
         <h3 className="book-title">{title}</h3>

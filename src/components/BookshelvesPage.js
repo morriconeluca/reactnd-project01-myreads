@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import Header from './Header';
 import Bookshelf from './Bookshelf';
 
-const BookshelvesPage = ({myReads}) => {
+const BookshelvesPage = ({myReads, updateMyReads}) => {
   const shelves = [
     {
       type: 'currentlyReading',
@@ -27,7 +27,12 @@ const BookshelvesPage = ({myReads}) => {
       </Header>
       {
         shelves.map(shelf => (
-          <Bookshelf key={shelf.type} books={myReads} shelf={shelf} />
+          <Bookshelf
+            key={shelf.type}
+            books={myReads}
+            shelf={shelf}
+            updateMyReads={updateMyReads}
+          />
         ))
       }
       <Link
