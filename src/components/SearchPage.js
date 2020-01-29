@@ -13,6 +13,7 @@ const SearchPage = ({booksFound, updateMyReads, updateBooksFound}) => {
           to="/"
           className="back-link circle-icon-button"
           title="Back to Bookshelves"
+          onClick={() => {updateBooksFound([]);}}
         >
           Back to Bookshelves
         </Link>

@@ -12,6 +12,7 @@ class Search extends Component {
     const {query} = this.state;
 
     if (!query) {
+      this.props.updateBooksFound([]);
       return;
     }
 
