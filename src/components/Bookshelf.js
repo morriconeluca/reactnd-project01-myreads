@@ -2,9 +2,9 @@ import React from 'react';
 import BookCard from './BookCard';
 
 function Bookshelf({books, shelf, updateMyReads}) {
-  books = books.filter(book => {
+  books = !('error' in books) ? books.filter(book => {
     return !book.shelf || book.shelf === shelf.type
-  });
+  }): books;
 
   return (
     <section className="bookshelf centralize">
@@ -14,7 +14,7 @@ function Bookshelf({books, shelf, updateMyReads}) {
             <h2 className="bookshelf-title">{shelf.name}</h2>
           </header>
         }
-        {books.length > 0
+        {!('error' in books) && books.length > 0
           ? (
             <ul className="books-grid centralize">
               {
@@ -37,7 +37,7 @@ function Bookshelf({books, shelf, updateMyReads}) {
             </ul>
           ) : (
             <div className="centralize">
-              <p>No books yet...</p>
+              <p>{'error' in books ? 'No books found for this query.' : 'No books yet...'}</p>
             </div>
           )
         }
