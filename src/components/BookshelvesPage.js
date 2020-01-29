@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import Header from './Header';
 import Bookshelf from './Bookshelf';
 
-const BookshelvesPage = ({myReads, updateMyReads}) => {
+const BookshelvesPage = ({myReads, myReadsIds, updateMyReads}) => {
   const shelves = [
     {
       type: 'currentlyReading',
@@ -31,6 +31,7 @@ const BookshelvesPage = ({myReads, updateMyReads}) => {
             key={shelf.type}
             books={myReads}
             shelf={shelf}
+            myReadsIds={myReadsIds}
             updateMyReads={updateMyReads}
           />
         ))

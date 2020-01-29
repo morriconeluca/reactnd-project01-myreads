@@ -1,15 +1,35 @@
 import React, {Component} from 'react';
 import * as BooksAPI from '../BooksAPI';
 
-class BookShelfChanger extends Component {
+class BookshelfChanger extends Component {
   state = {
-    value: this.props.shelf || 'none'
+    value: ''
   };
+
+  getShelf = () => {
+    const {shelf, myReadsIds, bookId} = this.props;
+    if (shelf) {
+      return shelf.type;
+    } else {
+      for (let shelf in myReadsIds) {
+        if (myReadsIds[shelf].includes(bookId)) {
+          return shelf;
+        }
+      }
+    }
+    return 'none'
+  }
+
+  componentDidMount() {
+    this.setState({
+      value: this.getShelf()
+    });
+  }
 
   updateBook = () => {
     const {bookId, updateMyReads} = this.props;
-    BooksAPI.update({id: bookId}, this.state.value).then(() => {
-      updateMyReads(bookId);
+    BooksAPI.update({id: bookId}, this.state.value).then(myReadsIds => {
+      updateMyReads(bookId, myReadsIds);
     });
   }
 
@@ -36,4 +56,4 @@ class BookShelfChanger extends Component {
   }
 }
 
-export default BookShelfChanger;
+export default BookshelfChanger;

@@ -1,10 +1,10 @@
 import React from 'react';
 import BookCard from './BookCard';
 
-function Bookshelf({books, shelf, updateMyReads}) {
+function Bookshelf({books, shelf, myReadsIds, updateMyReads}) {
   books = !('error' in books) ? books.filter(book => {
     return !book.shelf || book.shelf === shelf.type
-  }): books;
+  }) : books;
 
   return (
     <section className="bookshelf centralize">
@@ -29,6 +29,7 @@ function Bookshelf({books, shelf, updateMyReads}) {
                       authors={authors}
                       thumbnail={thumbnail}
                       shelf={shelf}
+                      myReadsIds={myReadsIds}
                       updateMyReads={updateMyReads}
                     />
                   );

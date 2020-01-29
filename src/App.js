@@ -9,24 +9,37 @@ class App extends Component {
   state = {
     loading: true,
     myReads: [],
+    myReadsIds: {},
     booksFound: []
   };
 
   componentDidMount() {
-    BooksAPI.getAll().then(data => {
+    BooksAPI.getAll().then(books => {
+      const myReadsIds = {
+        currentlyReading: [],
+        wantToRead: [],
+        read: []
+      };
+
+      books.forEach(book => {
+        myReadsIds[book.shelf].push(book.id);
+      });
+
       this.setState({
-        myReads: data,
+        myReads: books,
+        myReadsIds: myReadsIds,
         loading: false
       });
     });
   }
 
-  updateMyReads = (bookID) => {
-    BooksAPI.get(bookID).then(bookFromAPI => {
+  updateMyReads = (bookId, myReadsIds) => {
+    BooksAPI.get(bookId).then(bookFromAPI => {
       this.setState(({myReads}) => ({
         myReads: myReads.filter(book => (
-          book.id !== bookID
-        )).concat(bookFromAPI)
+          book.id !== bookId
+        )).concat(bookFromAPI),
+        myReadsIds
       }));
     });
   };
@@ -46,6 +59,7 @@ class App extends Component {
               return (
                 <BookshelvesPage
                   myReads={this.state.myReads}
+                  myReadsIds={this.state.myReadsIds}
                   updateMyReads={this.updateMyReads}
                 />
               );
@@ -54,8 +68,9 @@ class App extends Component {
               return (
                 <SearchPage
                   booksFound={this.state.booksFound}
-                  updateMyReads={this.updateMyReads}
                   updateBooksFound={this.updateBooksFound}
+                  myReadsIds={this.state.myReadsIds}
+                  updateMyReads={this.updateMyReads}
                 />
               );
             }}/>

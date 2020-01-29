@@ -3,7 +3,7 @@ import BookshelfChanger from './BookshelfChanger';
 
 import coverPlaceholder from '../book-cover-placeholder.png'
 
-function BookCard({id, title, authors, thumbnail, shelf, updateMyReads}) {
+function BookCard({id, title, authors, thumbnail, shelf, myReadsIds, updateMyReads}) {
   return (
     <li className="book-card centralize">
       <figure className="book">
@@ -14,7 +14,8 @@ function BookCard({id, title, authors, thumbnail, shelf, updateMyReads}) {
         />
         <BookshelfChanger
           bookId={id}
-          shelf={shelf && shelf.type}
+          shelf={shelf}
+          myReadsIds={myReadsIds}
           updateMyReads={updateMyReads}
         />
       </figure>
